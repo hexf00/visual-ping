@@ -4,7 +4,6 @@ import path from 'path';
 import PingManager from './PingManager';
 import WebSocket, { Server } from 'ws';
 
-const projectPath = path.join(__dirname, "../")
 const app = express();
 
 
@@ -19,7 +18,7 @@ app.listen(8001, 'localhost', _ => {
 app.use('/public', express.static('public'))
 // 处理Action
 app.get('/', (req, res) => {
-  res.send(fs.readFileSync(projectPath + "src/views/index.html").toString())
+  res.send(fs.readFileSync(path.join("src/front/views/index.html")).toString())
 })
 
 const wsServer = new Server({ port: 8002 });
@@ -54,3 +53,6 @@ var pingManager2 = new PingManager("baidu.com").start().on('data', (data: Number
   send("baidu.com", data)
 })
 
+export {
+
+}

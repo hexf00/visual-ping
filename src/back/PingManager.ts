@@ -3,7 +3,7 @@ import child_process, { ChildProcessWithoutNullStreams } from 'child_process';
 
 import fs from "fs";
 import StreamLinter from "./StreamLinter";
-import EventEmiter from './EventEmiter';
+import EventEmiter from '../common/EventEmiter';
 
 export default class PingManager extends EventEmiter {
   private ip: string = ""

@@ -4,19 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "nodemon": "nodemon ./dist/server.js"
+    "nodemon": "nodemon ./dist/back.js",
+    "front": "webpack --config=./build/front.webpack.config.ts --watch",
+    "back": "webpack --config=./build/back.webpack.config.ts --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/echarts": "^4.4.3",
     "@types/express": "^4.17.3",
     "@types/node": "^13.9.1",
     "@types/ws": "^7.2.2",
+    "echarts": "^4.7.0",
     "express": "^4.17.1",
     "iconv-lite": "^0.5.1",
     "nodemon": "^2.0.2",
+    "ts-loader": "^6.2.1",
     "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2",
     "ws": "^7.2.3"
   }
 }
